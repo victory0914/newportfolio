@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Akshay Bangar Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+
+		.nametitle {
+			font-size: 45px !important;
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">フルスタック開発者</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>ホーム</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>私たちについて</span></a></li>
+					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>スキル</span></a></li>
+					<li class="nav-item"><a href="#experience-section" class="nav-link"><span>けいけん</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>プロジェクト</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>お問い合わせ</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/profile_photo_1.png);width: 60%;margin-top: 100px;height: 20%;">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">はじめまして。!</span>
+								<h1 class="mb-4 mt-3 nametitle">私は<span>佐藤昌典です。</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Perfect Design  ',
+										'Fullstack Developer  ',
+										'Freelancer  ',
+										'   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>能力のある開発者</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<!-- Left Side with Image and Skills -->
+				<div class="col-md-6 col-lg-5 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay">
+							<div class="about-img">
+								<img src="images/about_me_2.png" class="img-fluid rounded b-shadow-a"
+									alt="Akshay Bangar">
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Right Side with About Me Title, Paragraph, and Download CV Button -->
+				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+					<div class="row justify-content-center mb-6 pb-6">
+						<div class="col-md-12 heading-section ftco-animate">
+							<h1 class="big">私について</h1>
+							<h2 class="mb-4">私について</h2>
+							<br>
+							<p>ウェブデザインの経験が豊富なフルスタック開発者。 ソリューション主導のフルスタックエンジニア。消費者向けオンライン製品およびサービスの構築で 9 年以上の実務経験があります。
+								複数の API、サードパーティ統合、データベースにまたがるウェブアプリを設計および開発しました。 クライアントを失望させることがないよう、常に仕事の迅速な完了を心がけています。
+							</p>
+
+							<p>マルチタスクの専門知識を駆使して、あらゆる職場環境を管理できるほどのエキスパートです。 常に新しいことを学び、以前の知識を更新するよう努めています。
+								タスクを効率的かつ正確に遂行することに自信があります。 クライアントに献身し、常にクライアントの尊重すべきニーズに焦点を当てています。 クライアントの 100%
+								の満足度で仕事に取り組みます。</p>
+
+						</div>
+					</div>
+					<!-- Download CV Button -->
+					<div class="row mt-3">
+						<div class="col-md-12">
+							<!-- <a href="https://drive.google.com/file/d/1pmaHcpQ2YeKSpcwN3di7hM9ex4WForW6/view?usp=sharing"
+								class="btn btn-primary py-3 px-3">Download CV</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-skills img ftco-section" id="skills-section">
+		<div class="container">
+			<div class="row">
+				<!-- Skills Section -->
+				<div class="col-md-10">
+					<div class="heading-section ftco-animate">
+						<h1 class="big">スキル</h1>
+						<h2 class="mb-4">スキル</h2>
+						<br>
+						<div class="underline"></div>
+					</div>
+
+					<br>
+					<br>
+
+					<div class="skills-list">
+						<div class="row">
+							<!-- Skill 1 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/html_logo.png" alt="HTML Logo" class="img-fluid skill-logo">
+								<p><b>HTML</b></p>
+							</div>
+
+							<!-- Skill 2 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/css_logo.png" alt="CSS Logo" class="img-fluid skill-logo">
+								<p><b>CSS</b></p>
+							</div>
+
+							<!-- Skill 3 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/javascript_logo.png" alt="JavaScript Logo"
+									class="img-fluid skill-logo">
+								<p><b>JavaScript</b></p>
+							</div>
+							<!-- Skill 3 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/wordpress_logo.jpg" alt="wordpress Logo"
+									class="img-fluid skill-logo">
+								<p><b>WordPress</b></p>
+							</div>
+							<!-- Skill 4 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/java_logo.png" alt="Java Logo" class="img-fluid skill-logo">
+								<p><b>Java</b></p>
+							</div>
+
+							<!-- Skill 6 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/python.png" alt="C Logo" class="img-fluid skill-logo">
+								<p><b>Python</b></p>
+							</div>
+						</div>
+
+						<div class="row">
+							<!-- Skill 7 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/android_logo.png" alt="Android Logo" class="img-fluid skill-logo">
+								<p><b>Android</b></p>
+							</div>
+
+							<!-- Skill 8 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/sql_logo.png" alt="SQL Logo" class="img-fluid skill-logo">
+								<p><b>SQL</b></p>
+							</div>
+
+							<!-- Skill 9 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/mysql_logo.png" alt="MySQL Logo" class="img-fluid skill-logo">
+								<p><b>MySQL</b></p>
+							</div>
+
+							<!-- Skill 10 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/spring_logo.png" alt="Spring Logo" class="img-fluid skill-logo">
+								<p><b>Spring</b></p>
+							</div>
+
+							<!-- Skill 11 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/spring_boot.png" alt="Spring Boot Logo" class="img-fluid skill-logo">
+								<p><b>Spring Boot</b></p>
+							</div>
+
+							<!-- Add more skills as needed -->
+							<!-- Skill 12 -->
+							<div class="col-md-2 text-center mb-4">
+								<img src="images/xml_logo.png" alt="XML Logo" class="img-fluid skill-logo">
+								<p><b>XML</b></p>
+							</div>
+						</div>
+
+						<div class="row">
+							<!-- Skill 13 -->
+							<div class="col-md-2 text-center mb-2">
+								<img src="images/git_logo.png" alt="Git Logo" class="img-fluid skill-logo">
+								<p><b>Git</b></p>
+							</div>
+
+							<!-- Skill 14 -->
+							<div class="col-md-2 text-center mb-2">
+								<img src="images/power_bi_logo.png" alt="PowerBI Logo" class="img-fluid skill-logo">
+								<p><b>PowerBI</b></p>
+							</div>
+
+							<!-- Skill 15 -->
+							<div class="col-md-2 text-center mb-2">
+								<img src="images/dsa_logo.png" alt="DSA Logo" class="img-fluid skill-logo">
+								<p><b>DSA</b></p>
+							</div>
+
+							<!-- Skill 16 -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section ftco-no-pb" id="experience-section">
+		<div class="container">
+
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-6 heading-section text-center ftco-animate">
+					<h1 class="big">けいけん</h1>
+					<h2 class="mb-4">けいけん</h2>
+					<p>&nbsp;</p>
+					<div class="underline"></div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<h2 style="color: #ffbd39;    font-size: 30px;">フロントエンド開発者<span class="date"
+								style="margin-left: 50px;"></span> </h2>
+						<p class="mt-4">
+						<ul>
+							フロントエンド開発者として8年以上の経験があり、ReactやVue.jsなどの最新フレームワークを活用してレスポンシブで高性能なWebアプリケーションを構築しています。
+							ユーザーに優しい直感的なUI設計と、クロスファンクショナルなチームとの協業により、革新的なデジタル体験を提供することに自信があります。
+						</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"></span>
+						<h2 style="color: #ffbd39;    font-size: 30px;">バックエンドエンジニア</h2>
+						<p class="mt-4">
+						<ul>
+							バックエンドエンジニアとして6年以上の実務経験があり、PHP、Ruby on Rails、Node.jsなどの最新技術を活用して、高信頼性かつスケーラブルなシステムの設計・開発を行っております。
+							システムのパフォーマンス最適化やセキュリティ強化にも注力し、チームと連携して企業の業務効率向上に貢献してきました。
+						</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<!-- <h1 class="big big-2" >プロジェクト</h1> -->
+					<h2 class="mb-4">プロジェクト</h2>
+					<p>&nbsp;</p>
+					<div class="underline">
+					</div>
+
+				</div>
+			</div>
+			<div class="row d-flex">
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://partners-re.co.jp/"
+							class="block-20 zoom-effect" style="background-image: url('images/project_1.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://partners-re.co.jp/">株式会社パートナーズの公式サイト</a></h3>
+							<!-- <p>Webデザインエンジニアとして、ユーザー視点を重視した美しく機能的なウェブサイトの設計・開発に豊富な経験を有しております。</p> -->
+							<h6>技術スタック: Figma, XD, Photoshop 等</h6>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://kaho-enterprise.co.jp/" class="block-20 zoom-effect"
+							style="background-image: url('images/project_2.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://kaho-enterprise.co.jp/">株式会社カホエンタープライズの公式サイト</a></h3>
+							<!-- <p>企業のウェブサイトエンジニアとして、ユーザー体験を重視した信頼性の高い企業サイトの設計・構築に注力しております。
+								最新のウェブ技術とレスポンシブデザインを駆使し、ブランドイメージの向上とビジネス成果の最大化に貢献することを目指しています。</p> -->
+							<h6>技術スタック: WordPress,React.js, Next.js 等</h6>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.nono-medtown.com/" class="block-20 zoom-effect" style="background-image: url('images/project_3.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.nono-medtown.com/">病院管理システム制作</a></h3>
+							<!-- <p>病院管理システムの開発に携わり、患者情報管理、予約スケジュール、請求処理、レポート作成などの機能を統合し、業務効率と患者ケアの向上に大きく貢献しました。</p> -->
+							<h6>技術スタック: React.js, Node.js, MySQL 等</h6>
+						</div>
+					</div>
+				</div>
+<!-- // -->
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.atomis.co.jp/" class="block-20 zoom-effect" style="background-image: url('images/project_4.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.atomis.co.jp/">株式会社Atomis（アトミス）</a></h3>
+							<!-- <p>Atomisは、次世代の多孔性材料であるPCP/MOF（多孔性配位高分子）技術を活用して、ガス関連の新しい可能性を探る企業です。</p> -->
+							<h6>技術スタック: WordPress, PHP, MySQL 等</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://kitchhike.com/" class="block-20 zoom-effect" style="background-image: url('images/project_5.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://kitchhike.com/">株式会社KitchHike</a></h3>
+							<!-- <p>病院管理システムの開発に携わり、患者情報管理、予約スケジュール、請求処理、レポート作成などの機能を統合し、業務効率と患者ケアの向上に大きく貢献しました。</p> -->
+							<h6>T技術スタック: Ruby on Rails, Ruby, Lightbox, jquery 等</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://funnext-group.co.jp/" class="block-20 zoom-effect" style="background-image: url('images/project_6.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://funnext-group.co.jp/">株式会社ファンネクストグループ</a></h3>
+							<!-- <p>病院管理システムの開発に携わり、患者情報管理、予約スケジュール、請求処理、レポート作成などの機能を統合し、業務効率と患者ケアの向上に大きく貢献しました。</p> -->
+							<h6>技術スタック: WordPress, PHP, GSAP, MySQL 等</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.oro.com/ja/" class="block-20 zoom-effect" style="background-image: url('images/project_7.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.oro.com/ja/">株式会社オロ</a></h3>
+							<!-- <p>病院管理システムの開発に携わり、患者情報管理、予約スケジュール、請求処理、レポート作成などの機能を統合し、業務効率と患者ケアの向上に大きく貢献しました。</p> -->
+							<h6>技術スタック: React.js, Next.js, GSAP, jquery 等</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://recruit.renxa.co.jp/" class="block-20 zoom-effect" style="background-image: url('images/project_8.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://recruit.renxa.co.jp/">Renxa株式会社</a></h3>
+							<!-- <p>病院管理システムの開発に携わり、患者情報管理、予約スケジュール、請求処理、レポート作成などの機能を統合し、業務効率と患者ケアの向上に大きく貢献しました。</p> -->
+							<h6>技術スタック: Vue.js,Nuxt.js, Node.js, MySQL 等</h6>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.shiroyama-g.co.jp/wedding/" class="block-20 zoom-effect" style="background-image: url('images/project_9.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.shiroyama-g.co.jp/wedding/">SHIROYAMA HOTEL kagoshima</a></h3>
+							<!-- <p>病院管理システムの開発に携わり、患者情報管理、予約スケジュール、請求処理、レポート作成などの機能を統合し、業務効率と患者ケアの向上に大きく貢献しました。</p> -->
+							<h6>技術スタック: Google Analytics, PHP, Cloudflare 等</h6>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<br>
+			
+		</div>
+	</section>
+
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/more_projects.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2><span> Github </span>のその他のプロジェクト </h2>
+					<div class="heading">
+						<h4> 革新的なソリューションを生み出し、
+							アイデアを効率的かつ使いやすいWebプロジェクトへと形にすることに情熱を注いでいます。 </h4>
+						<br>
+						<p><a href="https://github.com/AkshayBangarAB" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2 contact-uptitle">お問い合わせ</h1>
+					<h2 class="mb-4 ">お問い合わせ</h2>
+					<p>以下に、私への連絡先を記載します。</p>
+					<div class="underline" style="margin-bottom: 50px;">
+					</div>
+				</div>
+					<br>
+					<br>
+					<p>&nbsp;</p>
+					<!-- <div style="width:100%;height:500px;" data-fillout-id="2wn5Vy8CP1us"
+						data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize>
+					</div> -->
+					<div class="contact">
+						<div class="contact-title">Contact Me</div>
+						<input type="text" placeholder="Name">
+						<input type="text" placeholder="Email address">
+						<textarea name="" id="" placeholder="Message" class="contact-textarea" rows="6"></textarea>
+						<button type="submit">Submit</button>
+					</div>
+					<!-- <script src="./js/aaa.js"></script> -->
+					<div class="container">
+						<br>
+						<br>
+						<ul
+							class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+							<li class="ftco-animate normal-txt">私を見つける </li>
+							<li class="ftco-animate"><a href="https://www.linkedin.com/"><span
+										class="icon-linkedin"></span></a></li>
+							<li class="ftco-animate"><a href="https://github.com/victory914-Lang"><span
+										class="icon-github"></span></a></li>
+							<li class="ftco-animate"><a href="https://web.skype.com/"><span class="icon-skype"></span></a></li>
+							<li class="ftco-animate"><a href="https://go.chatwork.com/en/"><span class="icon-wechat"></span></a></li>
+							<li class="ftco-animate"><a href=""><span class="icon-instagram"></span></a></li>
+						</ul>
+						<br>
+					</div>
+				</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | Satou Masanori
+						<!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
